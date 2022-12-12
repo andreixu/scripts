@@ -12,4 +12,6 @@ echo "export PATH=$SDK_DIR/google-cloud-sdk/bin:$PATH" | tee -a /etc/profile.d/g
 . /etc/profile
 
 #test gcloud cli
+ln -s $SDK_DIR/google-cloud-sdk/bin/gcloud /usr/bin/gcloud
+ln -s $SDK_DIR/google-cloud-sdk/bin/gsutil /usr/bin/gsutil
 gcloud version
