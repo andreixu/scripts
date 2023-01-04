@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SDK_DIR=/usr/local/lib
-apt update && apk install curl jq python3 || true
+apt update && apt install curl jq python3 || true
 curl "https://www.googleapis.com/storage/v1/b/cloud-sdk-release/o?prefix=google-cloud-sdk-4" \
   | jq -r '.items[].selfLink | select ( match ("linux-x86_64") )' \
   | tail -n1 \
